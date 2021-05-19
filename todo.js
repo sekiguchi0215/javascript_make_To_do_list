@@ -28,4 +28,8 @@ const addTodo = () => {
   todoInput.value = ''
 }
 
+const switchStates = (e) => {
+  alert('状態切り替え')
+}
+
 addButton.addEventListener('click', addTodo)
