@@ -3,6 +3,7 @@ const todoInput = document.querySelector('.todo-input')
 const todoList = document.querySelector('.todo-list')
 
 const addTodo = () => {
+  if (todoInput.value === '') return
   // alert(`タスク追加:${todoInput.value}`)
   const newTodo = document.createElement('li')
 
@@ -23,6 +24,8 @@ const addTodo = () => {
   newTodo.appendChild(deleteButton)
 
   todoList.appendChild(newTodo)
+
+  todoInput.value = ''
 }
 
 addButton.addEventListener('click', addTodo)
